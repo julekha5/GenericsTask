@@ -19,22 +19,23 @@ public class Maximum {
 		return max;
 	}
 
-	// Take input as a float number
-	public void findMaxFloat() {
+	// Take input as a string
+	public void findMaxString() {
 		Maximum mx = new Maximum();
-		System.out.println("Enter 3 float number");
+		System.out.println("Enter 3 Strings ");
 		Scanner sc = new Scanner(System.in);
-		float num1 = sc.nextFloat();
-		float num2 = sc.nextFloat();
-		float num3 = sc.nextFloat();
 
-		System.out.println("Maximum float number is:" + mx.findMax(num1, num2, num3));
+		String str1 = sc.next();
+		String str2 = sc.next();
+		String str3 = sc.next();
+
+		System.out.println("Maximum String is:"+mx.findMax(str1, str2, str3));
 	}
 
 	public static void main(String[] args) {
 		Maximum mx = new Maximum();
 		System.out.println("Welcome to Generic Practice Problem");
-		mx.findMaxFloat();
+		mx.findMaxString();
 
 	}
 }
