@@ -1,4 +1,5 @@
 package genericpack;
+
 import java.util.Scanner;
 
 public class Maximum {
@@ -18,8 +19,22 @@ public class Maximum {
 		return max;
 	}
 
-	
+	// Take Input as integer number
+	public void findMaxInteger() {
+		Maximum mx = new Maximum();
+		System.out.println("Enter 3 integer number");
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+
+		System.out.println("Maximum integer number is:" + mx.findMax(num1, num2, num3));
+	}
+
 	public static void main(String[] args) {
+		Maximum mx = new Maximum();
 		System.out.println("Welcome to Generic Practice Problem");
+		mx.findMaxInteger();
+
 	}
 }
