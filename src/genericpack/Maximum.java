@@ -1,4 +1,5 @@
 package genericpack;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,12 +15,21 @@ public class Maximum<T extends Comparable<T>> {
 		return max;
 	}
 
-	public static void main(String[] args) {
-		Maximum obj = new Maximum();
-		System.out.println("The Maximum integer num is:" + obj.findMax(Arrays.asList(4, 7, 8, 9, 44, 55)));
-		System.out.println("The Maximum float num is:" + obj.findMax(Arrays.asList(1.9, 3.0, 6.7, 2.6, 4.5, 5.8)));
-		System.out.println(
-				"The Maximum String  is:" + obj.findMax(Arrays.asList("Apple", "banana", "peach", "mango", "kiwi")));
+	public static <T extends Comparable> T printMax() {
 
+		System.out.println("Calling findMaxMethod through printMax");
+		System.out.println("The Maximum integer num is:" + findMax(Arrays.asList(4, 7, 8, 9, 44, 55)));
+		System.out.println("The Maximum float num is:" + findMax(Arrays.asList(4.9, 7.8, 8.0, 9.6, 44.7, 55.6)));
+		System.out.println(
+				"The Maximum String  is:" + findMax(Arrays.asList("Apple", "banana", "peach", "mango", "kiwi")));
+		return null;
 	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Find the Max Value ");
+
+		printMax();
+	}
+
 }
